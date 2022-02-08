@@ -12,7 +12,7 @@ var gbQuantity; //gingerbread total quant
 var ccQuantity; //chocolate chip total quant
 var ssQuantity; //sugar sprinkle total quant
 var total = 0;  //total count
-var totalQuantity = document.getElementById("quantity-total");
+var totalQuantity = document.getElementById("quantity-total"); //all cookies total quantity
 var gbQuantity = document.getElementById("qty-gb");
 var ccQuantity = document.getElementById("qty-cc");
 var ssQuantity = document.getElementById("qty-sugar");
@@ -24,10 +24,13 @@ document.getElementById("credit").textContent = `Created by ${yourName}`
 
 // Event listener, action of clicks on the "+" button for Gingerbread cookies.
 
+//note no code present that accounts for conditions such as extraneous neg clicks 
+//when total count for each cookie is at 0
 document.getElementById("add-gb").addEventListener('click', function() {
     
     {
-        gb++
+             gb++
+       
     }
    
     gbQuantity.textContent = gb;
@@ -46,7 +49,14 @@ if(gb > 0)
     
     gbQuantity.textContent = gb;
 
-    total = total - 1;
+    if(total <= 0 && gb === 0)//if total is in the neg and gb is 0 then correct total to 0
+    {
+        total = 0;
+    }
+    else{
+        total = total - 1;
+    }
+    
     totalQuantity.textContent = total;
     
     console.log("Gingerbread - was clicked!")
@@ -75,9 +85,14 @@ document.getElementById("minus-cc").addEventListener("click", function()
     {
         cc--
     }
-    
+    if(total <= 0 && cc === 0)//if total is in the neg and cc is 0 then correct total to 0
+    {
+        total = 0;
+    }
+    else{
+         total = total - 1;
+    }
     ccQuantity.textContent = cc;
-    total = total - 1;
     totalQuantity.textContent = total;
     
     
@@ -104,11 +119,14 @@ document.getElementById("minus-sugar").addEventListener("click", function() {
     {
         ss--
     }    
-    
+    if(total <= 0 && ss === 0)//if total is in the neg and ss is 0 then correct total to 0
+    {
+        total = 0;
+    }
+    else{
+         total = total - 1;
+    }
     ssQuantity.textContent = ss;
-    
-    total = total - 1;
-    
     totalQuantity.textContent = total;
     console.log("Sugar Sprinkle - was clicked!")
 })
