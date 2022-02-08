@@ -49,7 +49,7 @@ if(gb > 0)
     
     gbQuantity.textContent = gb;
 
-    if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and gb is 0 then correct total to 0
+    if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and all cookies are 0 then correct total to 0
     {
         total = 0;
     }
@@ -85,7 +85,7 @@ document.getElementById("minus-cc").addEventListener("click", function()
     {
         cc--
     }
-    if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and cc is 0 then correct total to 0
+    if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and all cookies are 0 then correct total to 0
     {
         total = 0;
     }
@@ -115,11 +115,12 @@ document.getElementById("minus-sugar").addEventListener("click", function() {
     {
         ss--
     }    
-    if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and ss is 0 then correct total to 0
+    if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and all cookies are 0 then correct total to 0
     {
         total = 0;
     }
     if(ss !== 0){
+
          total = total - 1;
     }
     ssQuantity.textContent = ss;
