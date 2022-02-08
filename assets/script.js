@@ -3,24 +3,24 @@ console.log('JavaScript code has loaded!')
 // First, tell us your name
 let yourName = "Samantha Finks" // HINT: Replace this with your own name!
 
-// We'll use these variables to track the counts of each cookie type.
+// We'll use these variables to track the counts of each cookie type. let limited scope
 let gb = 0      //Gingerbread
 let cc = 0      //Chocolate Chip
 let ss = 0      //Sugar Sprinkle
-//Total Quantity.
-var gbQuantity;
-var ccQuantity;
-var ssQuantity;
-var total = 0;
+//variables dealing with total quantity 
+var gbQuantity; //gingerbread total quant
+var ccQuantity; //chocolate chip total quant
+var ssQuantity; //sugar sprinkle total quant
+var total = 0;  //total count
 var totalQuantity = document.getElementById("qty-total");
 var gbQuantity = document.getElementById("qty-gb");
 var ccQuantity = document.getElementById("qty-cc");
 var ssQuantity = document.getElementById("qty-sugar");
 
 
-//Updating display name
+//code updating name display
 
-document.getElementById("credit").textContent = `Created by ${yourName}`
+document.getElementById("credit").textContent = `Created by ${yourName}` 
 
 // Event listener for clicks on the "+" button for Gingerbread cookies.
 
