@@ -36,7 +36,7 @@ document.getElementById("add-gb").addEventListener('click', function() {
     gbQuantity.textContent = gb;
     
     total = total + 1;
-    totalQuantity = document.getElementById("qty-total");
+    totalQuantity = document.getElementById("qty-total");//updating the total
     totalQuantity.textContent = total;
     console.log("Gingerbread + was clicked!")
 })
