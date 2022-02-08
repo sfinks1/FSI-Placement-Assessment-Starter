@@ -12,7 +12,7 @@ var gbQuantity; //gingerbread total quant
 var ccQuantity; //chocolate chip total quant
 var ssQuantity; //sugar sprinkle total quant
 var total = 0;  //total count
-var totalQuantity = document.getElementById("qty-total");
+var totalQuantity = document.getElementById("quantity-total");
 var gbQuantity = document.getElementById("qty-gb");
 var ccQuantity = document.getElementById("qty-cc");
 var ssQuantity = document.getElementById("qty-sugar");
@@ -22,7 +22,7 @@ var ssQuantity = document.getElementById("qty-sugar");
 
 document.getElementById("credit").textContent = `Created by ${yourName}` 
 
-// Event listener for clicks on the "+" button for Gingerbread cookies.
+// Event listener, action of clicks on the "+" button for Gingerbread cookies.
 
 document.getElementById("add-gb").addEventListener('click', function() {
     
