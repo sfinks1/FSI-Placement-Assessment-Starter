@@ -29,13 +29,14 @@ document.getElementById("credit").textContent = `Created by ${yourName}`
 document.getElementById("add-gb").addEventListener('click', function() {
     
     {
-             gb++
+             gb++ //increment
        
     }
    
     gbQuantity.textContent = gb;
     
     total = total + 1;
+    totalQuantity = document.getElementById("qty-total");
     totalQuantity.textContent = total;
     console.log("Gingerbread + was clicked!")
 })
@@ -45,6 +46,7 @@ document.getElementById("minus-gb").addEventListener("click", function() {
 if(gb > 0)
     {
         gb-- 
+        total = total - 1;
     }
     
     gbQuantity.textContent = gb;
@@ -53,9 +55,9 @@ if(gb > 0)
     {
         total = 0;
     }
-    if(gb !== 0){
-        total = total - 1;
-    }
+   // if(gb !== 0){
+   //      total = total - 1;
+   // }
     
     totalQuantity.textContent = total;
     
@@ -71,7 +73,7 @@ document.getElementById("add-cc").addEventListener("click", function() {
     }
     
     ccQuantity.textContent = cc;
-    
+    totalQuantity = document.getElementById("qty-total");
     total = total + 1;
     totalQuantity.textContent = total;
     
@@ -84,14 +86,15 @@ document.getElementById("minus-cc").addEventListener("click", function()
     if(cc > 0)
     {
         cc--
+        total = total - 1;
     }
     if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and all cookies are 0 then correct total to 0
     {
         total = 0;
     }
-    if(cc !== 0){
-         total = total - 1;
-    }
+    //if(cc !== 0){
+    //     total = total - 1;
+    //}
     ccQuantity.textContent = cc;
     totalQuantity.textContent = total;  
     console.log("Chocolate Chip - was clicked!")
@@ -114,15 +117,15 @@ document.getElementById("minus-sugar").addEventListener("click", function() {
     if ( ss > 0)
     {
         ss--
+        total = total - 1;
     }    
     if(cc===0 && ss === 0 && gb === 0)//if total is in the neg and all cookies are 0 then correct total to 0
     {
         total = 0;
     }
-    if(ss !== 0){
-
-         total = total - 1;
-    }
+    //if(ss !== 0){
+    //     total = total - 1;
+    //}
     ssQuantity.textContent = ss;
     totalQuantity.textContent = total;
     console.log("Sugar Sprinkle - was clicked!")
