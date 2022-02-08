@@ -53,7 +53,7 @@ if(gb > 0)
     {
         total = 0;
     }
-    if(gb != 0){
+    if(gb !== 0){
         total = total - 1;
     }
     
@@ -89,7 +89,7 @@ document.getElementById("minus-cc").addEventListener("click", function()
     {
         total = 0;
     }
-    if(cc != 0){
+    if(cc !== 0){
          total = total - 1;
     }
     ccQuantity.textContent = cc;
@@ -119,7 +119,7 @@ document.getElementById("minus-sugar").addEventListener("click", function() {
     {
         total = 0;
     }
-    if(ss != 0){
+    if(ss !== 0){
          total = total - 1;
     }
     ssQuantity.textContent = ss;
